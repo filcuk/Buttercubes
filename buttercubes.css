@@ -6,7 +6,7 @@
     mix-blend-mode: normal;
     
     /* Cast hard glow to improve visibility on light backgrounds */
-    text-shadow: 0px 0px 1px #000, 0px 1px 1px #000, 1px 0px 1px #000;
+    text-shadow: 1px 1px 0.5px #000, 1px 0px 0.5px #000, 0px 1px 0.5px #000;
 }
 
 
