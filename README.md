@@ -1,5 +1,5 @@
 # buttercubes
-Various QoL fixes for glasscubes.com platform
+Various QoL fixes and improvements for the glasscubes.com platform
 
 Developed on Firefox
 
