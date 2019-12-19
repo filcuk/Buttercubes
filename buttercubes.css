@@ -1,0 +1,14 @@
+@-moz-document url-prefix("https://corporatesolutions.glasscubes.com") {
+
+/* Fix: Labels not readable on light backgrounds */
+.label, .name-label {
+    /* Could be used to contrast text but won't work with bg and text in the same element */
+    /* mix-blend-mode: difference; */
+    
+    /* Cast hard black glow */
+    text-shadow: 0px 0px 1px #000, 0px 1px 1px #000, 1px 0px 1px #000;
+}
+
+
+/* END */
+}
