@@ -1,5 +1,31 @@
 @-moz-document url-prefix("https://corporatesolutions.glasscubes.com") {
 
+/* BUTTERCUBES 3.0 */
+
+/* Remove pin icon from the toolbar */
+
+#nav > h2 + .mainnav-minmax + .tooltip, #nav > .pin-nav {
+    display: none;
+}
+
+#nav > ul {
+    margin: 0;
+}
+
+
+/* Remove workspaces header */
+
+#nav > ul > .work-spaces > div:first-child {
+    display: none;
+}
+
+
+/* Remove dashboard banner */
+
+#dashboard-header-wrapper {
+    display: none;
+}
+
 /* Fix: Labels not readable on light backgrounds */
 .label, .name-label, .ui-menu-item {
     /* Could be used to contrast text but won't work with bg and text in the same element */
