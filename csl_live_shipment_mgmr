@@ -1,0 +1,98 @@
+@-moz-document url-prefix("https://csl-liveuk.net/maxoptra/") {
+/* walkaround check fieldset */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(4) {
+    display: none !important;
+}
+
+/* trailer check fieldset */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(5) {
+    display: none !important;
+}
+
+/* basic: details subfields */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(2) > legend + div > div > div > div > div > div > fieldset + div {
+    display: none !important;
+}
+
+/* main: left spacings */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(5),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(6) {
+    display: none !important;
+}
+
+/* main: carbon footprint & right spacings */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(6),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(7),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(8),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(9),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(10){
+    display: none !important;
+}
+
+/* Details: damaged */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(4){
+    display: none !important;
+}
+
+/* Details: delete POD spacing */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(5) > label + div > div > div > div {
+    
+}
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(5) > label + div > div > div > div > a + div {
+    
+}
+
+/* Details: Scan POD */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(1) > div > div > table:last-of-type{
+    display: none !important;
+}
+
+/* Details: discrepancy & other */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(2),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(3),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(4),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(6),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(7),
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(8){
+    display: none !important;
+}
+
+/* Rates: resize */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(6) {
+    width: 250px !important;
+    float: left;
+}
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(6) > legend + div:nth-of-type(1) {
+    width: 250px !important;
+}
+
+/* Pricing details: resize */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(7) {
+    width: 1113px !important;
+    margin-left: 17px !important;
+    float: left;
+}
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > fieldset:nth-of-type(7) > legend + div:nth-of-type(1) {
+    width: 1100px !important;
+}
+
+/* Rates/Pricing resize unallocate button fix */
+.x-panel-body.x-panel-body-noheader.x-panel-body-noborder.x-form > div:last-of-type {
+    float: left;
+    width: 1000px !important;
+    margin-left: 20px !important;
+    margin-top: -10px;
+    height: 35px
+}
+
+/* Save/Close buttons repositioning */
+.x-grid3-row.colored_row.x-grid3-row-first.x-grid3-row-selected.x-grid3-row-expanded > table + div > div > div:last-of-type > div > div > table {
+    float: left !important;
+    margin-left: 1280px;
+    margin-top: -56px;
+    position: relative;
+    z-index: 10000 !important;
+}
+
+/*color: #ca0000;*/
+}
