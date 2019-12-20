@@ -1,0 +1,15 @@
+/* Better individual result entry screenshot */
+
+@-moz-document url-prefix("https://forms.office.com/") {
+.gradingByStudentGradeContainer, .gradingByStudentFeedbackContainer {
+    display: none !important;
+}
+
+.gradingByStudentResponseContainer {
+    max-width: 100% !important;
+}
+
+.gradingByStudentFullQuestionContainer {
+    width: 600px;
+}
+}
