@@ -1,0 +1,108 @@
+@-moz-document domain("corporatesolutions.glasscubes.com") {
+/* Main menu at the top of the sidebar */
+.menu-toggle #nav > ul > li > a span {
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    box-shadow: none;
+}
+.menu-toggle #nav > ul > li > a i {
+    background: none;
+}
+
+/* Hide main menu 'hover' button, now useless */
+#nav > h2 {
+    display:none
+}
+#nav > ul {
+    margin-top: 0px !important;
+} 
+
+/* Fix main menu hover color */
+.menu-toggle #nav > ul > .acc-nav-link:hover {
+    background: #4cb332;
+}
+#chatwindow:hover {
+    background: none !important;
+}
+
+/* Workspace list */
+.menu-toggle #nav > ul > li > ul {
+    visibility: visible;
+    opacity: 1;
+    left: 0px;
+    /*height: 400px !important; /**/
+    position: relative;
+    box-shadow: none;
+    background: none;
+}
+
+/* Fix workspace padding */
+.menu-toggle #nav > ul > li > ul li:first-child {
+    padding-top: 0px;
+}
+.menu-toggle #nav > ul > li > ul li:last-child {
+    padding-bottom: 0px;
+}
+
+/* Workspace list hover */
+.jspPane > li > ul, li {
+    background: none;
+}
+.jspPane > li > ul > li:hover,
+.jspPane > li > ul > a:hover {
+    background: #4cb332 !important;
+}
+
+
+/* Remove the green left border from workspace items ? wtf */
+.menu-toggle #nav > ul > li > ul li {
+    border-left: none;
+}
+
+/* Fix grey scrollbar color */
+.menu-toggle .jspDrag:hover {
+    background-color: #4cb332;
+}
+
+/* Fix bright color overlay hiding selections in nav bar */
+#nav, .qadd ul li:hover {
+    background: #585858;
+}
+
+/* Workspace create icon */
+.menu-toggle .nav-add-ws-icon {
+    display: none;
+}
+
+/* Workspace filter input */
+html.menu-toggle #worksp-filter {
+    display: block !important;
+}
+
+/* Workspaces header */
+html.menu-toggle #nav .ws-filter-container span.ws-title {
+    display: inline;
+}
+
+/* Fix chat window */
+.menu-toggle #nav > ul > li.chat.toggle > div,
+.menu-toggle #nav > ul > li#chatwindow.toggle > div ul {
+    position: relative;
+    left: 0;
+}
+.menu-toggle #nav > ul > li.chat > .chat-window {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    left: 0;
+}
+
+#chatwindow > div > p {
+    background: none;
+}
+
+.menu-toggle #nav > ul > li #chatwindow.toggle > div ul {
+    box-shadow: none;
+}
+}
