@@ -1,5 +1,4 @@
 @-moz-document url-prefix("https://corporatesolutions.glasscubes.com") {
-
 /* BUTTERCUBES 3.0 */
 
 /* Remove pin icon from the toolbar */
@@ -29,10 +28,21 @@
 /* Fix: Labels not readable on light backgrounds */
 .label, .name-label, .ui-menu-item {
     /* Could be used to contrast text but won't work with bg and text in the same element */
-    mix-blend-mode: normal;
+    /* mix-blend-mode: normal; */
     
     /* Cast hard glow to improve visibility on light backgrounds */
-    text-shadow: 1px 1px 0.5px #000, 1px 0px 0.5px #000, 0px 1px 0.5px #000;
+    /* text-shadow: 1px 1px 0.5px #000, 1px 0px 0.5px #000, 0px 1px 0.5px #000; */
+    color: white;
+    text-shadow:
+         1px  1px 0.3px #000,
+         1px -1px 0.3px #000,
+        -1px  1px 0.3px #000,
+        -1px -1px 0.3px #000;
+    /* -webkit-font-smooth: antialiased; *Not yet supported */
+    
+    /* Store is well supported, but doesn't work great for small text */
+    /* -webkit-text-stroke: 1px black; */
+    /* -webkit-text-fill-color: white; */
 }
 
 
