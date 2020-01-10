@@ -64,9 +64,20 @@
 }
 
 
+/* Making workspace-nav horizontal WIP */
+/*
+nav.workspace-nav {
+    float: right;
+}
+
+.workspace-nav .workspace-nav-fixed .workspace-nav-links > li {
+    width: 50px !important;
+}
+*/
+
 /* Fix: Spacing between main content box and right info boxes */
 
-.contentwrapper {
+#content .contentwrapper {
     width: calc( 100% - 244px ) !important;
 }
 
