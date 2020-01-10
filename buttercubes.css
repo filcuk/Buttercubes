@@ -25,6 +25,55 @@
     display: none;
 }
 
+/* Move nav to the top */
+#nav {
+    top: 0px
+}
+
+/* Make nav narrower */
+#nav {
+    width: 260px !important;
+}
+
+#top {
+    left: 260px;
+}
+
+#content {
+    padding-left: 260px !important;
+}
+
+
+/* Global search box improvements */
+
+.global-search-panel.top-header-search-container {
+    left: 416px !important;
+    width: 500px;
+}
+
+.search-field-container.inline-block {
+    width: 500px !important;
+}
+
+.search-field-menu {
+    width: 500px !important;
+}
+
+.global-search-panel .global-search-header-panel .search-form-panel {
+    text-align: left !important;
+}
+
+
+/* Fix: Spacing between main content box and right info boxes */
+
+.contentwrapper {
+    width: calc( 100% - 244px ) !important;
+}
+
+.selectallcnt.opsother {
+    margin-right: 9px !important;
+}
+
 /* Fix: Labels not readable on light backgrounds */
 .label, .name-label, .ui-menu-item {
     /* Could be used to contrast text but won't work with bg and text in the same element */
@@ -34,10 +83,10 @@
     /* text-shadow: 1px 1px 0.5px #000, 1px 0px 0.5px #000, 0px 1px 0.5px #000; */
     color: white;
     text-shadow:
-         1px  1px 0.3px #000,
-         1px -1px 0.3px #000,
-        -1px  1px 0.3px #000,
-        -1px -1px 0.3px #000;
+         1px  1px 0.3px #0006,
+         1px -1px 0.3px #0006,
+        -1px  1px 0.3px #0006,
+        -1px -1px 0.3px #0006;
     /* -webkit-font-smooth: antialiased; *Not yet supported */
     
     /* Store is well supported, but doesn't work great for small text */
