@@ -63,8 +63,45 @@
     text-align: left !important;
 }
 
+.global-search-panel .search-field-menu {
+    background: #fff;
+}
+
 
 /* Making workspace-nav horizontal WIP */
+
+nav.workspace-nav {
+    width: 100%;
+    height: 40px !important;
+    display: block;
+    font-size: 0px; /* ignore whitespace */
+}
+
+div.workspace-nav-fixed {
+    height: 100% !important;
+    top: 0px;
+    position: static;
+}
+
+nav.workspace-nav ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-top: 8px;
+}
+
+nav.workspace-nav ul li {
+    width: auto;
+    display: inline-block;
+    margin: 0;
+    padding: 0 26px 0 0;
+}
+
+nav.workspace-nav ul li a {
+    
+}
+
 /*
 nav.workspace-nav {
     float: right;
