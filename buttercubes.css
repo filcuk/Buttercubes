@@ -1,5 +1,77 @@
 @-moz-document url-prefix("https://corporatesolutions.glasscubes.com") {
-/* BUTTERCUBES 3.0 */
+/* Buttercubes 3 - Simply delicious.
+/*
+/* What are the goals of this venture?
+/* - reduce unecessary clicks
+/* - improve visibility
+/* - normalise different sections
+/* - fix anoying bugs
+/*
+/* https://github.com/filcuk/buttercubes
+*/
+
+/* Globals */
+:root {
+    --search-box-width: 884px;
+    --main-content-width: 884px;
+}
+
+/* SECTION NORMALISATION
+/*
+/* This section attempts to make all sections the same size
+*/
+
+/* Task manager
+*/
+
+/* Main task wrapper
+*/
+#content .task-manager-app {
+    display: block;
+}
+#content .task-manager-app .task-list-panel:first-child {
+    width: var(--main-content-width) !important;
+    float: left;
+}
+
+/* Task detail sidebar
+/* - resize, fix width
+/* - hide task title (alreade seen in main content)
+*/
+#content .task-manager-app .task-detail-panel {
+    margin-left: 900px;
+    width: 445px;
+    height: 620px !important;
+    overflow-y: scroll;
+}
+#content .task-manager-app .task-detail-panel .task-scoll-area {
+    height: 620px !important;
+}
+#content .task-manager-app .task-detail-panel .t3tdp-taskTitle {
+    display: none;
+}
+
+/* Task filter sidebar
+/* - always visible, fix width
+/* - fit underneath task detail
+*/
+#content .task-manager-app .task-filter-panel {
+    display: block !important;
+    margin-left: 900px;
+    height: 240px !important;
+    width: 445px;
+}
+#content .task-manager-app .task-filter-panel [title=Hide] {
+    display: none;
+}
+#content .task-manager-app .task-filter-panel .t3titleFilterPanel.section {
+    margin: 0;
+}
+
+
+
+
+
 
 /* Remove pin icon from the toolbar */
 
@@ -44,20 +116,32 @@
 }
 
 
+/* Hide top box logo */
+#top .top-header-container {
+    display: none;
+}
+
 /* Global search box improvements */
 
 .global-search-panel.top-header-search-container {
-    left: 416px !important;
-    width: 500px;
+    left: 275px !important;
+    width: var(--search-box-width);
 }
 
 .search-field-container.inline-block {
-    width: 500px !important;
+    width: var(--search-box-width) !important;
+    border-radius: 0 !important;
 }
 
 .search-field-menu {
-    width: 500px !important;
+    width: calc(var(--search-box-width) - 2px) !important;
+    background: #ffffffed !important; 
 }
+
+.search-field > .search-field-container > input.search-input {
+    width: calc(var(--search-box-width) - 33px);
+}
+
 
 .global-search-panel .global-search-header-panel .search-form-panel {
     text-align: left !important;
@@ -83,11 +167,11 @@ div.workspace-nav-fixed {
     position: static;
 }
 
-nav.workspace-nav ul {
+nav.workspace-nav ul.workspace-nav-links {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding-left: 18px;
+    padding-left: 12px;
     padding-top: 8px;
 }
 
@@ -95,26 +179,56 @@ nav.workspace-nav ul li {
     width: auto;
     display: inline-block;
     margin: 0;
-    padding: 0 26px 0 0;
+    padding: 0;
 }
 
-nav.workspace-nav ul li a {
-    
+nav.workspace-nav ul.workspace-nav-links li a {
+    font-size: 18px;
+    padding: 4px 26px 4px 6px;
+    /* text-transform: uppercase; */
+    color: #666;
 }
 
-/*
-nav.workspace-nav {
-    float: right;
+nav.workspace-nav ul.workspace-nav-links li a:hover {
+    color: black;
 }
 
-.workspace-nav .workspace-nav-fixed .workspace-nav-links > li {
-    width: 50px !important;
+/* attempt to not have links shift on :hover bold
+nav.workspace-nav ul.workspace-nav-links li a:after {
+    display: block;
+    content: attr(value);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 */
 
+nav.workspace-nav ul.workspace-nav-links .active-cube a {
+    color: black;
+}
+
+/* Options links: just set it to always visible... */
+nav.workspace-nav ul.workspace-nav-links li .workspace-options-links {
+    display: inline-block !important;
+}
+
+nav.workspace-nav ul.workspace-nav-links li .workspace-options-links:hover {
+    color: black;
+}
+
+nav.workspace-nav ul.workspace-nav-links li .workspace-options-links .active a {
+    color: black;
+}
+
+nav.workspace-nav ul.workspace-nav-links .workspace-options-tab {
+    display: none;
+}
+
+
 /* Fix: Spacing between main content box and right info boxes */
 
-#content .contentwrapper {
+#content > .contentwrapper {
     width: calc( 100% - 244px ) !important;
 }
 
