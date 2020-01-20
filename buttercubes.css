@@ -12,9 +12,27 @@
 
 /* Globals */
 :root {
-    --search-box-width: 884px;
+    --container-spacing: 15px;
     --main-content-width: 884px;
+    --nav-bar-width: 260px;
+    
+    --nav-bar-offset: calc(var(--nav-bar-width) + var(--container-spacing) * 1);
+    --main-content-offset: calc(var(--nav-bar-width) + var(--main-content-width) + var(--container-spacing) * 2)
 }
+
+/* SORT THIS */
+/* Fix: Spacing between main content box and right info boxes */
+
+#content > .contentwrapper {
+    width: calc( 100% - 244px ) !important;
+}
+
+.selectallcnt.opsother {
+    margin-right: 9px !important;
+}
+
+/**************************************/
+
 
 /* SECTION NORMALISATION
 /*
@@ -42,7 +60,6 @@
     margin-left: 900px;
     width: 445px;
     height: 620px !important;
-    overflow-y: scroll;
 }
 #content .task-manager-app .task-detail-panel .task-scoll-area {
     height: 620px !important;
@@ -69,189 +86,184 @@
 }
 
 
+/* NAV BAR IMPROVEMENTS
+*/
 
-
-
-
-/* Remove pin icon from the toolbar */
-
-#nav > h2 + .mainnav-minmax + .tooltip, #nav > .pin-nav {
+/* Hide nav bar pin
+/* - presumed always pinned
+/* - fix spacing once removed
+*/
+#nav > .pin-nav {
     display: none;
 }
-
 #nav > ul {
     margin: 0;
 }
 
+/* Narrow nav bar
+/* - fix reliant containers
+*/
+#nav {
+    width: var(--nav-bar-width) !important;
+}
+#top {
+    left: var(--nav-bar-width);
+}
+#content {
+    padding-left: var(--nav-bar-width) !important;
+}
 
-/* Remove workspaces header */
-
-#nav > ul > .work-spaces > div:first-child {
-    display: none;
+/* Nav bar 'workspace' toolbox
+/* - hide nonsense
+/* - keep always visible filter
+*/
+#workspacelink, #nav .nav-add-ws-icon, #nav .search, .ws-filter-container > .man-tooltip {
+    display: none !important;
+}
+#nav > ul > .work-spaces {
+    border-top: none !important;
+}
+.ws-filter-container {
+    width: 100% !important;
+}
+#worksp-filter {
+    display: block !important;
+    padding: 0px !important;
+    height: auto !important;
+    margin: 5px 0;
+}
+#wsp-filter-name {
+    border: none !important;
+    border-radius: 0 !important;
+    background: #666 !important;
+    padding: 15px 13px !important;
 }
 
 
-/* Remove dashboard banner */
+/* DASHBOARD IMPROVEMENTS
+*/
 
+/* Remove dashboard banner
+/* - fix navbar position
+*/
 #dashboard-header-wrapper {
     display: none;
 }
-
-/* Move nav to the top */
 #nav {
     top: 0px
 }
 
-/* Make nav narrower */
-#nav {
-    width: 260px !important;
-}
 
-#top {
-    left: 260px;
-}
+/* TOP BAR IMPROVEMENTS
+*/
 
-#content {
-    padding-left: 260px !important;
-}
-
-
-/* Hide top box logo */
+/* Hide top box logo
+*/
 #top .top-header-container {
     display: none;
 }
 
-/* Global search box improvements */
-
+/* Search box improvements
+/* - align & resize to main content
+*/
 .global-search-panel.top-header-search-container {
-    left: 275px !important;
-    width: var(--search-box-width);
+    left: var(--nav-bar-offset) !important;
+    width: var(--main-content-width);
 }
-
 .search-field-container.inline-block {
-    width: var(--search-box-width) !important;
+    width: var(--main-content-width) !important;
     border-radius: 0 !important;
 }
-
 .search-field-menu {
-    width: calc(var(--search-box-width) - 2px) !important;
+    width: calc(var(--main-content-width) - 2px) !important;
     background: #ffffffed !important; 
 }
-
 .search-field > .search-field-container > input.search-input {
-    width: calc(var(--search-box-width) - 33px);
+    width: calc(var(--main-content-width) - 33px);
 }
-
-
 .global-search-panel .global-search-header-panel .search-form-panel {
     text-align: left !important;
 }
 
-.global-search-panel .search-field-menu {
-    background: #fff;
-}
 
+/* WORKSPACE NAV */
 
-/* Making workspace-nav horizontal WIP */
-
+/* Main menu
+/* - making workspace-nav horizontal
+/* - generally improving the looks & usability
+*/
 nav.workspace-nav {
     width: 100%;
     height: 40px !important;
     display: block;
     font-size: 0px; /* ignore whitespace */
 }
-
 div.workspace-nav-fixed {
     height: 100% !important;
-    top: 0px;
     position: static;
 }
-
-nav.workspace-nav ul.workspace-nav-links {
+ul.workspace-nav-links {
     width: 100%;
-    height: 100%;
     overflow: hidden;
-    padding-left: 12px;
-    padding-top: 8px;
+    padding-left: var(--container-spacing) !important;
+    padding-top: 2px;
 }
-
 nav.workspace-nav ul li {
     width: auto;
     display: inline-block;
     margin: 0;
     padding: 0;
 }
-
-nav.workspace-nav ul.workspace-nav-links li a {
+ul.workspace-nav-links li a {
     font-size: 18px;
-    padding: 4px 26px 4px 6px;
-    /* text-transform: uppercase; */
+    padding: 4px 26px 4px 2px;
     color: #666;
 }
-
-nav.workspace-nav ul.workspace-nav-links li a:hover {
+ul.workspace-nav-links li a:hover, ul.workspace-nav-links .active-cube a {
     color: black;
 }
-
-/* attempt to not have links shift on :hover bold
-nav.workspace-nav ul.workspace-nav-links li a:after {
-    display: block;
-    content: attr(value);
-    font-weight: bold;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
+nav.workspace-nav ul.workspace-nav-links li a::before {
+    background: none;
 }
+
+/* Options menu
+/* - always visible
 */
-
-nav.workspace-nav ul.workspace-nav-links .active-cube a {
-    color: black;
-}
-
-/* Options links: just set it to always visible... */
-nav.workspace-nav ul.workspace-nav-links li .workspace-options-links {
-    display: inline-block !important;
-}
-
-nav.workspace-nav ul.workspace-nav-links li .workspace-options-links:hover {
-    color: black;
-}
-
-nav.workspace-nav ul.workspace-nav-links li .workspace-options-links .active a {
-    color: black;
-}
-
-nav.workspace-nav ul.workspace-nav-links .workspace-options-tab {
+ul.workspace-nav-links .workspace-options-tab {
     display: none;
 }
-
-
-/* Fix: Spacing between main content box and right info boxes */
-
-#content > .contentwrapper {
-    width: calc( 100% - 244px ) !important;
+ul.workspace-options-links {
+    display: inline-block !important;
+    padding-left: 25px !important;
+}
+ul.workspace-options-links a {
+    color: #aaa !important;
+}
+ul.workspace-options-links a:hover, ul.workspace-options-links .active a {
+    color: black !important;
 }
 
-.selectallcnt.opsother {
-    margin-right: 9px !important;
-}
 
-/* Fix: Labels not readable on light backgrounds */
+/* BUG FIXES */
+
+/* Labels not readable on light bg's
+/* - apply shadow around text
+*/
 .label, .name-label, .ui-menu-item {
-    /* Could be used to contrast text but won't work with bg and text in the same element */
-    /* mix-blend-mode: normal; */
-    
-    /* Cast hard glow to improve visibility on light backgrounds */
-    /* text-shadow: 1px 1px 0.5px #000, 1px 0px 0.5px #000, 0px 1px 0.5px #000; */
-    color: white;
     text-shadow:
          1px  1px 0.3px #0006,
          1px -1px 0.3px #0006,
         -1px  1px 0.3px #0006,
-        -1px -1px 0.3px #0006;
-    /* -webkit-font-smooth: antialiased; *Not yet supported */
+        -1px -1px 0.3px #0006,
+         1px  1px 0.4px #0008,
+         1px -1px 0.4px #0008,
+        -1px  1px 0.4px #0008,
+        -1px -1px 0.4px #0008;
     
-    /* Store is well supported, but doesn't work great for small text */
+    /* best solution, but won't work when bg and text are in the same el */
+    /* mix-blend-mode: normal; */
+    
+    /* stroke doesn't work well for tiny text */
     /* -webkit-text-stroke: 1px black; */
     /* -webkit-text-fill-color: white; */
 }
