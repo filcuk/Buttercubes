@@ -223,6 +223,21 @@
     text-align: left !important;
 }
 
+/* Profile box improvements
+/*
+*/
+nav#user {
+    left: 1135px;
+}
+nav#user div.quick-add-menu {
+    
+}
+nav#user ul.top-right-links {
+    
+}
+nav#user ul.three-dots {
+    
+}
 
 /* WORKSPACE NAV */
 
