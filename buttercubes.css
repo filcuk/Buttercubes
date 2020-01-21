@@ -15,6 +15,7 @@
     --container-spacing: 15px;
     --main-content-width: 884px;
     --nav-bar-width: 260px;
+    --buttercubes-logo: url("https://raw.githubusercontent.com/filcuk/Buttercubes/master/res/buttercubes_logo.png");
     
     --nav-bar-offset: calc(var(--nav-bar-width) + var(--container-spacing) * 1);
     --main-content-offset: calc(var(--nav-bar-width) + var(--main-content-width) + var(--container-spacing) * 2)
@@ -182,10 +183,22 @@
 /* TOP BAR IMPROVEMENTS
 */
 
-/* Hide top box logo
+/* Improve top box logo
 */
 #top .top-header-container {
-    display: none;
+    margin-left: 920px;
+}
+#logo {
+    width: 47px;
+    overflow: hidden;
+}
+#logo > a > img {
+    width: 47px;
+    background: var(--buttercubes-logo) no-repeat;
+    background-position: left;
+    background-size: contain;
+    padding-left: 47px;
+    left: 0px;
 }
 
 /* Search box improvements
