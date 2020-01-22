@@ -15,7 +15,8 @@
     --container-spacing: 15px;
     --main-content-width: 884px;
     --nav-bar-width: 260px;
-    --buttercubes-logo: url("https://raw.githubusercontent.com/filcuk/Buttercubes/master/res/buttercubes_logo.png");
+    --detail-width: 445px;
+    --buttercubes-logo: url("https://raw.githubusercontent.com/filcuk/Buttercubes/master/res/buttercubes2_logo.png");
     
     --nav-bar-offset: calc(var(--nav-bar-width) + var(--container-spacing) * 1);
     --main-content-offset: calc(var(--nav-bar-width) + var(--main-content-width) + var(--container-spacing) * 2)
@@ -40,8 +41,22 @@
 /* This section attempts to make all sections the same size
 */
 
-/* Task manager
+/* Main content */
+
+/* On: Dashboard
 */
+#content .container-fluid .col-xs-7 {
+    width: var(--main-content-width);
+    left: var(--container-spacing);
+    padding: 0;
+}
+#content .container-fluid .col-xs-5 {
+    width: var(--detail-width);
+    left: 1100 !important; /*var(--main-content-offset);*/
+    padding: 0;
+}
+
+/* Task manager */
 
 /* Main task wrapper
 */
@@ -102,7 +117,7 @@
     display: block !important;
     margin-left: 900px;
     height: 240px !important;
-    width: 445px;
+    width: var(--detail-width);
 }
 #content .task-manager-app .task-filter-panel [title=Hide] {
     display: none;
@@ -189,15 +204,15 @@
     margin-left: 920px;
 }
 #logo {
-    width: 47px;
+    width: 50px;
+    height: 100%;
     overflow: hidden;
 }
 #logo > a > img {
-    width: 47px;
     background: var(--buttercubes-logo) no-repeat;
     background-position: left;
     background-size: contain;
-    padding-left: 47px;
+    padding-left: 50px;
     left: 0px;
 }
 
