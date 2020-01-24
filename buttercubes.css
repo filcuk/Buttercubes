@@ -13,13 +13,13 @@
 /* Globals */
 :root {
     --container-spacing: 15px;
-    --main-content-width: 884px;
+    --main-content-width: 850px;
     --nav-bar-width: 260px;
     --detail-width: 445px;
     --buttercubes-logo: url("https://raw.githubusercontent.com/filcuk/Buttercubes/master/res/buttercubes2_logo.png");
     
     --nav-bar-offset: calc(var(--nav-bar-width) + var(--container-spacing) * 1);
-    --main-content-offset: calc(var(--nav-bar-width) + var(--main-content-width) + var(--container-spacing) * 2)
+    --main-content-offset: calc(var(--main-content-width) + var(--container-spacing))
 }
 
 /* SORT THIS */
@@ -42,6 +42,17 @@
 */
 
 /* Main content */
+
+/* Fix content wrapper
+*/
+#content {
+    padding: 0 !important;
+    margin: 63px 0 0 260px !important;
+}
+#content .workspace-nav-content-wrapper {
+    min-height: 400px !important;
+    height: 100% !important;
+}
 
 /* On: Dashboard
 */
@@ -73,8 +84,8 @@
 /* - hide task title (alreade seen in main content)
 */
 #content .task-manager-app .task-detail-panel {
-    margin-left: 900px;
-    width: 445px;
+    margin-left: var(--main-content-offset);
+    width: var(--detail-width);
     height: 620px !important;
 }
 #content .task-manager-app .task-detail-panel .task-scoll-area {
@@ -115,7 +126,7 @@
 */
 #content .task-manager-app .task-filter-panel {
     display: block !important;
-    margin-left: 900px;
+    margin-left: var(--main-content-offset);
     height: 240px !important;
     width: var(--detail-width);
 }
@@ -150,13 +161,12 @@
 #top {
     left: var(--nav-bar-width);
 }
-#content {
-    padding-left: var(--nav-bar-width) !important;
-}
+
 
 /* Nav bar 'workspace' toolbox
 /* - hide nonsense
 /* - keep always visible filter
+/* - fix wierd height setting
 */
 #workspacelink, #nav .nav-add-ws-icon, #nav .search, .ws-filter-container > .man-tooltip {
     display: none !important;
@@ -178,6 +188,9 @@
     border-radius: 0 !important;
     background: #666 !important;
     padding: 15px 13px !important;
+}
+#id4620 {
+    height: 100% !important;
 }
 
 
@@ -201,9 +214,10 @@
 /* Improve top box logo
 */
 #top .top-header-container {
-    margin-left: 920px;
+    margin-left: var(--main-content-offset);
 }
 #logo {
+    margin-left: var(--container-spacing);
     width: 50px;
     height: 100%;
     overflow: hidden;
