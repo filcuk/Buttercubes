@@ -13,13 +13,15 @@
 /* Globals */
 :root {
     --container-spacing: 15px;
-    --main-content-width: 850px;
+    --main-content-width: 775px;
     --nav-bar-width: 260px;
     --detail-width: 445px;
+    --header-height: 62px;
     --buttercubes-logo: url("https://raw.githubusercontent.com/filcuk/Buttercubes/master/res/buttercubes2_logo.png");
     
     --nav-bar-offset: calc(var(--nav-bar-width) + var(--container-spacing) * 1);
     --main-content-offset: calc(var(--main-content-width) + var(--container-spacing))
+    --full-content-width: calc(775 + 15 + 445 + 15)px;
 }
 
 /* SORT THIS */
@@ -45,9 +47,13 @@
 
 /* Fix content wrapper
 */
+#root {
+    margin: var(--header-height) 0 0 var(--nav-bar-width) !important;
+}
 #content {
     padding: 0 !important;
-    margin: 63px 0 0 260px !important;
+    
+    max-width: var(--full-content-width); /* << NORMALIZWE THIS */
 }
 #content .workspace-nav-content-wrapper {
     min-height: 400px !important;
@@ -63,8 +69,8 @@
 }
 #content .container-fluid .col-xs-5 {
     width: var(--detail-width);
-    left: 1100 !important; /*var(--main-content-offset);*/
     padding: 0;
+    float: right;
 }
 
 /* Task manager */
@@ -118,6 +124,13 @@
 }
 .task-detail-panel .t3task-details .t3tdp-comment-container {
     margin-top: 0;
+}
+
+/* highlight the origin of task */
+#idd33 {
+    margin: 0 !important;
+    padding: 5px 15px;
+    background: #e8e8e8;
 }
 
 /* Task filter sidebar
@@ -334,7 +347,7 @@ ul.workspace-options-links a:hover, ul.workspace-options-links .active a {
 /* Labels not readable on light bg's
 /* - apply shadow around text
 */
-.label, .name-label, .ui-menu-item {
+span.label, span.name-label, li.ui-menu-item {
     text-shadow:
          1px  1px 0.3px #0006,
          1px -1px 0.3px #0006,
