@@ -21,7 +21,7 @@
     
     --nav-bar-offset: calc(var(--nav-bar-width) + var(--container-spacing) * 1);
     --main-content-offset: calc(var(--main-content-width) + var(--container-spacing))
-    --full-content-width: calc(775 + 15 + 445 + 15)px;
+    --full-content-width: calc(775 + 15 + 445 + 15 - 400)px;
 }
 
 /* SORT THIS */
@@ -49,11 +49,12 @@
 */
 #root {
     margin: var(--header-height) 0 0 var(--nav-bar-width) !important;
+    max-width: 1300px !important;
 }
 #content {
     padding: 0 !important;
     
-    max-width: var(--full-content-width); /* << NORMALIZWE THIS */
+/*    max-width: var(--full-content-width) !important; /* << NORMALIZWE THIS */
 }
 #content .workspace-nav-content-wrapper {
     min-height: 400px !important;
@@ -158,7 +159,7 @@
 /* - presumed always pinned
 /* - fix spacing once removed
 */
-#nav > .pin-nav {
+#nav > .pin-nav, #nav > .mainnav-minmax.tooltip {
     display: none;
 }
 #nav > ul {
