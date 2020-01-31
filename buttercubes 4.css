@@ -1,0 +1,30 @@
+@-moz-document domain("corporatesolutions.glasscubes.com") {
+/* Buttercubes 4 - Butterlicious.
+/*
+/* What are the goals of this venture?
+/* - reduce unecessary clicks
+/* - improve visibility
+/* - normalise different sections
+/* - fix anoying bugs
+/*
+/* https://github.com/filcuk/buttercubes
+*/
+
+
+#root {
+	width: 1300px;
+	margin: auto;
+}
+
+#top {
+	
+}
+
+#nav {
+	position: static;
+}
+
+#content {
+	
+}
+}
