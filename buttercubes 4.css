@@ -1,3 +1,4 @@
+@-moz-document domain("corporatesolutions.glasscubes.com") {
 /* Buttercubes 4 - Butterlicious.
 /*
 /* What are the goals of this venture?
@@ -10,8 +11,107 @@
 */
 
 :root {
-	--page-width: 1300px;
+	/* stolen from Stackoverflow */
+	--white: #fff;
+	--black: #0c0d0e;
+	--orange: #f48024;
+	--yellow: #fbf2d4;
+	--green: #5eba7d;
+	--blue: #0077cc;
+	--powder: #e1ecf4;
+	--red: #d1383d;
+	--black-025: #fafafb;
+	--black-050: #eff0f1;
+	--black-075: #e4e6e8;
+	--black-100: #d6d9dc;
+	--black-150: #c8ccd0;
+	--black-200: #bbc0c4;
+	--black-300: #9fa6ad;
+	--black-350: #9199a1;
+	--black-400: #848d95;
+	--black-500: #6a737c;
+	--black-600: #535a60;
+	--black-700: #3c4146;
+	--black-750: #2f3337;
+	--black-800: #242729;
+	--black-900: #0c0d0e;
+	--orange-050: #fff7f2;
+	--orange-100: #fee3cf;
+	--orange-200: #fcd0ad;
+	--orange-300: #f7aa6d;
+	--orange-400: #f48024;
+	--orange-500: #f2720c;
+	--orange-600: #da670b;
+	--orange-700: #bd5c00;
+	--orange-800: #a35200;
+	--orange-900: #874600;
+	--blue-050: #f2f9ff;
+	--blue-100: #cfeafe;
+	--blue-200: #addafc;
+	--blue-300: #6cbbf7;
+	--blue-400: #379fef;
+	--blue-500: #0095ff;
+	--blue-600: #0077cc;
+	--blue-700: #0064bd;
+	--blue-800: #0054a3;
+	--blue-900: #004487;
+	--powder-050: #f4f8fb;
+	--powder-100: #e1ecf4;
+	--powder-200: #d1e5f1;
+	--powder-300: #b3d3ea;
+	--powder-400: #a0c7e4;
+	--powder-500: #7aa7c7;
+	--powder-600: #5b8db1;
+	--powder-700: #39739d;
+	--powder-800: #2c5777;
+	--powder-900: #1e3c52;
+	--green-025: #eef8f1;
+	--green-050: #dcf0e2;
+	--green-100: #cae8d4;
+	--green-200: #a6d9b7;
+	--green-300: #82ca9a;
+	--green-400: #5eba7d;
+	--green-500: #48a868;
+	--green-600: #3d8f58;
+	--green-700: #2f6f44;
+	--green-800: #29603b;
+	--green-900: #1e472c;
+	--yellow-050: #fdf7e3;
+	--yellow-100: #fbf2d4;
+	--yellow-200: #f1e5bc;
+	--yellow-300: #e6d178;
+	--yellow-400: #e9c63f;
+	--yellow-500: #ddb624;
+	--yellow-600: #cea51b;
+	--yellow-700: #b89516;
+	--yellow-800: #9f8010;
+	--yellow-900: #826a0b;
+	--red-050: #fdf3f4;
+	--red-100: #f9d3d7;
+	--red-200: #f4b4bb;
+	--red-300: #e87c87;
+	--red-400: #de535e;
+	--red-500: #d1383d;
+	--red-600: #c02d2e;
+	--red-700: #ac2726;
+	--red-800: #942121;
+	--red-900: #7a1819;
+	--gold: #ffcc01;
+	--gold-lighter: #fff4d1;
+	--gold-darker: #f1b600;
+	--silver: #b4b8bc;
+	--silver-lighter: #e8e8e8;
+	--silver-darker: #9a9c9f;
+	--bronze: #caa789;
+	--bronze-lighter: #f2e9e1;
+	--bronze-darker: #ab825f;
+	
+	/* custom vars */
+	--page-width: 1200px;
+	--top-height: 50px;
 	--nav-width: 220px;
+	--cnav-height: 36px;
+	--content-width: calc(var(--page-width) - var(--nav-width));
 	--csl-green: #4cb332;
 	--gc-gray: #737373;
 	--bc-logo: url("https://raw.githubusercontent.com/filcuk/Buttercubes/master/res/buttercubes2_logo.png");
@@ -33,7 +133,6 @@
 	height: 50px;
 	border-top: 3px solid var(--csl-green) !important;
 	display: block;
-	box-sizing: content-box;
 }
 
 #top > .top-header-container {
@@ -58,20 +157,19 @@ nav#user > .gc-logo {
 
 nav#user > ul.top-right-links,
 nav#user > ul.three-dots {
-	padding: 11px 0;
+	padding: 9px 0;
 }
 
 nav#user > #id2457.quick-add-menu {
-	padding: 8px 0;
+	padding: 6px 0;
 	margin: 0;
 }
 
 /* SEARCH */
 nav#user > .global-search-panel.top-header-search-container {
-	margin-top: 7px;
+	padding: 7px 0;
+	margin: 0;
 }
-
-
 
 /* LOGO */
 #logo {
@@ -85,7 +183,12 @@ nav#user > .global-search-panel.top-header-search-container {
 	background-position: left center;
 	background-size: contain;
 	padding-left: 50px;
-	left: 10px;
+	left: 15px;
+	/* TODO fix logo size */
+}
+
+#logo:after {
+	/* TODO add BC4? */
 }
 
 /*****************************************************************/
@@ -94,7 +197,6 @@ nav#user > .global-search-panel.top-header-search-container {
 	top: 0;
 	width: var(--nav-width) !important;
 	border-top: 3px solid var(--csl-green);
-	
 }
 
 #nav > h2 {
@@ -166,4 +268,85 @@ nav#user > .global-search-panel.top-header-search-container {
 #content {
 	left: var(--nav-width);
 	padding: 0 !important;
+}
+
+/* CONTENT NAV */
+article#content > nav.workspace-nav {
+	background: var(--black-100);
+	margin-top: var(--top-height);
+	height: var(--cnav-height) !important;
+	width: 100%;
+	position: static;
+	z-index: 1;
+	font-size: 0; /* whitespace fix */
+}
+
+#content > nav.workspace-nav > .workspace-nav-fixed {
+	height: 100% !important;
+}
+
+#content > nav.workspace-nav ul li {
+	display: inline-block;
+	width: auto;
+	margin: 0;
+}
+
+#content > nav.workspace-nav .workspace-nav-links {
+	padding-left: 15px
+}
+
+#content > nav.workspace-nav ul li a {
+	margin: 3px 8px 3px 0; 
+	padding: 5px 5px;
+}
+
+#content > nav.workspace-nav ul li a:before {
+	display: none;
+}
+
+/* CONTENT NAV OPTIONS */
+#content > nav.workspace-nav .workspace-options-tab {
+	display: none;
+}
+
+#content > nav.workspace-nav .workspace-options-links {
+	display: inline-block !important;
+}
+
+
+/* CONTENT */
+article#content > div.workspace-nav-content-wrapper {
+	/*margin-top: calc(var(--top-height) + var(--cnav-height));*/
+}
+/* CONTENT: WS NAME */
+#content .ws-name-container {
+	position: sticky;
+	top: var(--top-height);
+	background: var(--black-050);
+	height: var(--cnav-height);
+	z-index: 1;
+}
+
+#content .ws-name-container .workspace-nav-ws-name {
+	margin: 5px 15px;
+}
+
+#content .ws-name-container .workspace-follow-panel {
+	margin: 6px 0;
+}
+
+#content .ws-name-container .workspace-follow-panel .followerListContainer > a > span:first-child {
+	display: none;
+}
+
+#content .ws-name-container .workspace-follow-panel .followerListContainer > a:after {
+	content: 'Butter up';
+}
+
+/* CONTENT: CONTAINER */
+#content .workspace-nav-content-container {
+	margin: 0px 0 0 0px;
+}
+
+/* NOTE!! : NEED TO SET FLEX PROPS ON CONTENT TO NOT STRETCH OUT OF BOUNDS */
 }
