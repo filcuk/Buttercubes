@@ -208,6 +208,7 @@ nav#user > .global-search-panel.top-header-search-container {
 	top: 0;
 	width: var(--nav-width) !important;
 	border-top: 3px solid var(--csl-green);
+	box-shadow: none;
 }
 
 #nav > h2 {
@@ -363,6 +364,11 @@ article#content > nav.workspace-nav {
 #content .row >.col-xs-7 {
 	width: var(--article-width);
 	padding: 0;
+}
+
+#content .row >.col-xs-7 > .row.mg-bottom-15,
+#content .row >.col-xs-7 > .row {
+	margin: 0;
 }
 
 #content .row >.col-xs-5 {
